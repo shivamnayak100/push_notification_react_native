@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useEffect } from 'react';
+import NotificationService from './src/services/notification_services';
 
 export default function App() {
+
+  useEffect(() => {
+    console.log("aslkfjasldjflsadflsajdfl############3");
+    NotificationService.initialize();
+  }, []);
+  
   return (
     <View style={styles.container}>
       <Text>Hi, I am push notification</Text>
-      <StatusBar style="auto" />
     </View>
   );
 }
